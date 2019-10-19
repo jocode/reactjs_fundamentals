@@ -85,3 +85,26 @@ Estos props salen de una variable de la clase que se llama _this.props_ y los va
 
 
 > Los props son argumentos, como colocamos los atributos en las etiquetas HTML normal. Para acceder a ellos usamos **this.props.nombreAtributo**
+
+
+## Nuestra primera página
+
+Las páginas en React son componentes y conseguir distinguirlas nos servirá para saber que es un componente que adentro lleva otros componentes.
+
+- Al escribir los *props* no importa el orden en el que lo hagas, únicamente importa el nombre.
+
+Una página es un componente que va a tener más componentes
+
+
+## Enlazando Eventos
+
+- React dispone de **eventos**. Cada vez que se recibe información en un input se obtiene un evento **onChange** y se maneja con un método de la clase **`this.handleChange`**
+- Los elementos button también tienen un evento que es **onClick**.
+- Cuando hay un botón dentro de un formulario, este automáticamente será de tipo **submit**. Si no queremos que pase así hay dos maneras de evitarlo: especificando que su valor es de tipo _button_ o manejándolo desde el formulario cuando ocurre el evento **onSubmit**.
+
+
+Puede habilitar Emmet para trabajar con React. Lo puedes ver en este artículo [Enable Emmet support for JSX in Visual Studio Code | React](https://medium.com/@eshwaren/enable-emmet-support-for-jsx-in-visual-studio-code-react-f1f5dfe8809c)
+
+
+> Cuando hay un botón en el formulario por defecto es de tipo Submit
+
