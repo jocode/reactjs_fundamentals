@@ -64,3 +64,61 @@ Cuando React renderiza los componentes decimos que entran en **_escena_**, cuand
 - **Desmontaje**:
     - Nos da la oportunidad de hacer limpieza de nuestro componente.
     - Se llama un método: **`componentWillUnmount`**.
+
+Se recomienda inicializar el estado en el constructor.
+
+
+```js
+class Badges extends React.Component {
+
+  constructor(props){
+    super(props);
+    console.log('1. constructor()');
+
+    this.state = {
+      data: []
+    };
+  }
+
+  componentDidMount(){
+    console.log('3. componentDidMount()');
+    
+    this.timeoutId = setTimeout(()=>{
+      this.setState({
+        data: [
+          ...dataObject,
+        ],
+      });
+    }, 3000);
+
+    
+  }
+
+  componentDidUpdate(prevProps, prevState){
+    console.log('5. componentDidUpdate()');
+    console.log({
+      prevProps: prevProps,
+      prevState: prevState
+    });
+
+    console.log({
+      props: this.props,
+      state: this.state
+    });
+  }
+
+  componentWillUnmount(){
+    clearTimeout(this.timeoutId);
+    console.log('6. componentDidUnmount()');
+  }
+
+  render() {
+    console.log('2/4. render()');
+    return (
+      <React.Fragment>
+        Contenido de la app
+      </React.Fragment>
+    );
+  }
+}
+```
