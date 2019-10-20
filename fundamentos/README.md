@@ -65,6 +65,27 @@ En JSX se utilizan las llaves para introducir variables o expresiones de Javascr
 Las expresiones pueden ser llamadas a otras funciones, cálculos matemáticos, etc. Si las expresiones son false, 0, null, undefined, entre otros, no se verán.
 
 
+```js
+const name = 'Camilo';
+const sum = () => 3+3;
+// const jsx = <h1>Hola, soy {sum()}</h1>;
+
+const jsx = (
+  <div>
+  <h1>Hola soy Johan</h1>
+  <p>Soy ingeniero Electrónico</p>
+</div>
+);
+// const element = React.createElement('a', {href: 'https://jocode.github.io'}, 'Hola!, Soy el children');
+const element = React.createElement('h1', {}, `Hola jaja, soy ${name}`);
+
+const container = document.getElementById('app');
+
+// ReactDOM.render(__qué__, __dónde__);
+ReactDOM.render(<BadgeNew/>, container);
+```
+
+
 ## Herramientas
 
 - El **theme** es ‘Material’: https://material-theme.site/ (uso la variación Darker High Contrast)

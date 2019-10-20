@@ -13,22 +13,12 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 import './global.css'
 //import Badge from './components/Badge'
-import BadgeNew from './pages/BadgeNew';
 
-const name = 'Camilo';
-const sum = () => 3+3;
-// const jsx = <h1>Hola, soy {sum()}</h1>;
-
-const jsx = (
-  <div>
-  <h1>Hola soy Johan</h1>
-  <p>Soy ingeniero Electrónico</p>
-</div>
-);
-// const element = React.createElement('a', {href: 'https://jocode.github.io'}, 'Hola!, Soy el children');
-const element = React.createElement('h1', {}, `Hola jaja, soy ${name}`);
+// Paginas
+// import BadgeNew from './pages/BadgeNew';
+import Badges from './pages/Badges';
+// import Badge from './components/Badge';
 
 const container = document.getElementById('app');
-
 // ReactDOM.render(__qué__, __dónde__);
-ReactDOM.render(<BadgeNew/>, container);
+ReactDOM.render(<Badges/>, container);

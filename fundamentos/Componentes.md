@@ -108,3 +108,37 @@ Puede habilitar Emmet para trabajar con React. Lo puedes ver en este artículo [
 
 > Cuando hay un botón en el formulario por defecto es de tipo Submit
 
+## Manejo de estado
+
+Hasta esta clase todos los componentes han obtenido su información a través de *props* que vienen desde afuera (otros componentes) pero hay otra manera en la que los componentes pueden producir su propia información y guardarla para ser consumida o pasada a otros componentes a través de sus props. La clave está en que la información del **state** a otros componentes pasará en una sola dirección y podrá ser consumida pero no modificada.
+
+- Para guardar la información en el estado se usa una función de la clase _component_ llamada **setState** a la cual se le debe pasar un objeto con la información que se quiere guardar.
+- Aunque no se ve, la información está siendo guardada en dos sitios. Cada _input_ guarda su propio valor y al tiempo la está guardando en _setState_, lo cual no es ideal. Para solucionarlo hay que _modificar los inputs_ de un estado de no controlados a controlados.
+
+
+> Cada input guarda su valor, además de decirle a **`setState`**, guarda este valor, eso no es ideal, debemos tener sólo una dunte de información.
+
+**:warning: `setState` y `state` son importatísimos en el desarrollo con react, de ahora en adelante se usará en practicamente todo.**
+
+
+## Levantamiento del estado
+
+**Levantar el estado** es una técnica de React que pone el estado en una localización donde se le pueda pasar como **_props_** a los componentes. Lo ideal es poner el estado en el lugar más cercano a todos los componentes que quieren compartir esa información.
+
+Algo interesante que le da el nombre a React es su parte de **_“reactivo”_** ya que cada vez que hay un cambio en el estado o en los *props* que recibe un componente se vuelve a renderizar todo el componente y todos sus descendientes.
+
+
+```js
+handleChange = e => {
+    const nextForm = this.state.form;
+    nextForm[e.target.name]= e.target.value;
+    this.setState({
+      form: nextForm
+    })
+  }
+```
+
+Cada vez que hay un cambio en estado o e los props que recibe un componente, se vuelve a renderizar todo el componente y todos sus descendientes.
+
+
+## Listas de componentes
