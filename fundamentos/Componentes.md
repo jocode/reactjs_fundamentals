@@ -105,6 +105,14 @@ Una página es un componente que va a tener más componentes
 
 Puede habilitar Emmet para trabajar con React. Lo puedes ver en este artículo [Enable Emmet support for JSX in Visual Studio Code | React](https://medium.com/@eshwaren/enable-emmet-support-for-jsx-in-visual-studio-code-react-f1f5dfe8809c)
 
+```js
+{
+   "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+   }
+}
+```
+
 
 > Cuando hay un botón en el formulario por defecto es de tipo Submit
 
@@ -139,6 +147,3 @@ handleChange = e => {
 ```
 
 Cada vez que hay un cambio en estado o e los props que recibe un componente, se vuelve a renderizar todo el componente y todos sus descendientes.
-
-
-## Listas de componentes

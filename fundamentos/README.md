@@ -91,3 +91,12 @@ ReactDOM.render(<BadgeNew/>, container);
 - El **theme** es ‘Material’: https://material-theme.site/ (uso la variación Darker High Contrast)
 - **Font**: Fira Code
 - También uso otro que se llama Bracket Pair Colorizer para ver los pares de paréntesis, brackets, etc: https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer
+- Puede habilitar Emmet para trabajar con React. Lo puedes ver en este artículo [Enable Emmet support for JSX in Visual Studio Code | React](https://medium.com/@eshwaren/enable-emmet-support-for-jsx-in-visual-studio-code-react-f1f5dfe8809c)
+
+```js
+{
+   "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+   }
+}
+```
