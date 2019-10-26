@@ -15,8 +15,8 @@ import './global.css'
 
 // SPA in component App
 import App from './components/App'
-import Rick from './components/Rick';
+// import Rick from './components/Rick';
 
 const container = document.getElementById('app');
 // ReactDOM.render(__qué__, __dónde__);
-ReactDOM.render(<Rick/>, container);
+ReactDOM.render(<App/>, container);
