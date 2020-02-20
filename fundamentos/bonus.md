@@ -90,3 +90,5 @@ React tiene un feature llamado **Hooks** que permite que las funciones también 
 - useMemo, es una funcionalidad que tiene react para mostrar los valores ya calculados previamente, de esta manera muestra los resultados más rápido.
 
 Los hooks, son útiles para las listas, donde se trabaja los datos.
+
+Declarativo. Especificamos qué hacemos, no como lo hacemos.

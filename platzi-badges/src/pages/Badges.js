@@ -17,13 +17,13 @@ class Badges extends React.Component {
     data: undefined
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.fetchData();
 
     this.intervalId = setInterval(this.fetchData, 5000);
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     clearInterval(this.intervalId);
   }
 
@@ -36,23 +36,23 @@ class Badges extends React.Component {
     // Lamada a la API
     try {
       const data = await api.badges.list();
-      this.setState({loading: false, data: data});
+      this.setState({ loading: false, data: data });
 
-    } catch (error){
-      const data = [];
-      this.setState({loading: false, error: error});
+    } catch (error) {
+      // const data = [];
+      this.setState({ loading: false, error: error });
     }
 
   }
 
   render() {
 
-    if (this.state.loading === true && !this.state.data){
-      return <PageLoading/>;
+    if (this.state.loading === true && !this.state.data) {
+      return <PageLoading />;
     }
 
-    if (this.state.error){
-      return <PageError error={this.state.error}/>;
+    if (this.state.error) {
+      return <PageError error={this.state.error} />;
     }
 
     return (

@@ -73,7 +73,7 @@ class BadgeNew extends React.Component {
                 firstName={this.state.form.firstName || 'FIRST_NAME'}
                 lastName={this.state.form.lastName || 'LAST_NAME'}
                 twitter={this.state.form.twitter || 'TWITTER'}
-                jobTitle={this.state.form.jobTitle || 'JOB_TITLEBa'}
+                jobTitle={this.state.form.jobTitle || 'JOB_TITLE'}
                 email={this.state.form.email}
                 avatarUrl="https://avatars0.githubusercontent.com/u/24928806?s=460&v=4"
               />
@@ -88,7 +88,7 @@ class BadgeNew extends React.Component {
                 error={this.state.error} />
             </div>
           </div>
-          <hr/>
+          <hr />
         </div>
       </React.Fragment>
     );

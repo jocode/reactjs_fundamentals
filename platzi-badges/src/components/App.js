@@ -14,12 +14,12 @@ function App() {
     <BrowserRouter>
       <Layout>
         <Switch>
-            <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/badges" component={Badges} />
           <Route exact path="/badges/new" component={BadgeNew} />
           <Route exact path="/badges/:badgeId" component={BadgeDetailsContainer} />
           <Route exact path="/badges/:badgeId/edit" component={BadgeEdit} />
-          <Route component={NotFound}/>
+          <Route component={NotFound} />
         </Switch>
       </Layout>
     </BrowserRouter>

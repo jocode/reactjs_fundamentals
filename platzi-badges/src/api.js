@@ -12,6 +12,7 @@ async function callApi(endpoint, options = {}) {
   options.headers = {
     'Content-Type': 'application/json',
     Accept: 'application/json',
+    'Access-Control-Allow-Origin': '*'
   };
 
   const url = BASE_URL + endpoint;

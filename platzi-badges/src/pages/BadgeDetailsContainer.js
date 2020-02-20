@@ -4,7 +4,7 @@ import PageLoading from '../components/PageLoading';
 import PageError from '../components/PageError';
 import api from '../api';
 import BadgeDetails from './BadgeDetails';
-import { throws } from 'assert';
+// import { throws } from 'assert';
 
 class BadgeDetailsContainer extends React.Component {
 
@@ -35,25 +35,25 @@ class BadgeDetailsContainer extends React.Component {
     }
 
     handleCloseModal = () => {
-        this.setState({modalIsOpen: false})
+        this.setState({ modalIsOpen: false })
     }
 
-    handleOpenModal = ()=> {
-        this.setState({modalIsOpen: true})
+    handleOpenModal = () => {
+        this.setState({ modalIsOpen: true })
     }
 
     onDeleteBadge = async e => {
-        this.setState({loading: true, error: null});
+        this.setState({ loading: true, error: null });
 
         try {
-         await api.badges.remove(
-             this.props.match.params.badgeId
-         );
-         this.setState({loading: false});
-         this.props.history.push('/badges');
+            await api.badges.remove(
+                this.props.match.params.badgeId
+            );
+            this.setState({ loading: false });
+            this.props.history.push('/badges');
 
-        } catch(error){
-            this.setState({loading: false, error})
+        } catch (error) {
+            this.setState({ loading: false, error })
         }
     }
 
@@ -67,11 +67,11 @@ class BadgeDetailsContainer extends React.Component {
         }
 
         return (
-            <BadgeDetails badge={this.state.data} 
-            onCloseModal={this.handleCloseModal}
-            onOpenModal={this.handleOpenModal}
-            modalIsOpen={this.state.modalIsOpen}
-            onDeleteBadge={this.onDeleteBadge}/>
+            <BadgeDetails badge={this.state.data}
+                onCloseModal={this.handleCloseModal}
+                onOpenModal={this.handleOpenModal}
+                modalIsOpen={this.state.modalIsOpen}
+                onDeleteBadge={this.onDeleteBadge} />
         );
     }
 
